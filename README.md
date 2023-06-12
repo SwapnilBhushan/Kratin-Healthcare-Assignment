@@ -2,7 +2,7 @@
 
 This health care application allows patients to manage and update their lab report history, calculate their glucose level, blood pressure level, oxygen level, and calculate their BMI (Body Mass Index). The application provides a user-friendly interface for patients to input and track their health data conveniently.
 
-Features:
+# Features:
 
 ---> Lab Report History: Patients can easily update and manage their lab report history. They can input their latest lab results, including glucose level, blood pressure, oxygen level, and other relevant data.
 
@@ -16,16 +16,20 @@ BMI Calculation: The application allows patients to calculate their Body Mass In
 
 
 # Install
-npm install
+
+$ npm install
 
 # Start development
-npm run dev
-npm start
+
+$ npm run dev
+
+$ npm start
 
 # Languages and Tools
 ---> React
 ---> Node
 ---> Express
+---> Swagger
 ---> MySql
 
 
