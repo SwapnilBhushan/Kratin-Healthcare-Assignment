@@ -1,0 +1,17 @@
+/* Fitnesstips.css */
+.fitnessTips {
+    padding: 2rem;
+    background-color: #373535;
+    color: #e7e4e4;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+  
+  .tips {
+    margin-bottom: 20px; /* Add bottom margin to create space between tips */
+  }
+  
+  .tips:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last tip to avoid extra space */
+  }
+  

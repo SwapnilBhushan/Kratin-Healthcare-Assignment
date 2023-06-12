@@ -1,0 +1,123 @@
+/**
+ * @swagger
+ * /medicalReport:
+ *   post:
+ *     summary: Upload a medical report
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         multipart/form-data:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               image:
+ *                 type: string
+ *                 format: binary
+ *     responses:
+ *       200:
+ *         description: Medical report uploaded successfully
+ */
+
+/**
+ * @swagger
+ * /showReport:
+ *   get:
+ *     summary: Get all medical reports
+ *     responses:
+ *       200:
+ *         description: Returns all medical reports
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 Status:
+ *                   type: string
+ *                   description: Request status
+ *                 Result:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/MedicalReport'
+ *
+ * /delete/{id}:
+ *   delete:
+ *     summary: Delete a medical report
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *           format: int64
+ *         description: ID of the medical report to delete
+ *     responses:
+ *       200:
+ *         description: Medical report deleted successfully
+ */
+
+/**
+ * @swagger
+ * /calculateHealthStatus:
+ *   post:
+ *     summary: Calculate health status
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/HealthStatusRequest'
+ *     responses:
+ *       200:
+ *         description: Health status calculated successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/HealthStatusResponse'
+ */
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     MedicalReport:
+ *       type: object
+ *       properties:
+ *         id:
+ *           type: integer
+ *           description: Medical report ID
+ *         image:
+ *           type: string
+ *           description: Medical report image filename
+ *
+ *     HealthStatusRequest:
+ *       type: object
+ *       properties:
+ *         glucoseLevel:
+ *           type: string
+ *           description: User's glucose level
+ *         oxygenLevel:
+ *           type: string
+ *           description: User's oxygen level
+ *         heartRate:
+ *           type: string
+ *           description: User's heart rate
+ *         bloodPressure:
+ *           type: string
+ *           description: User's blood pressure
+ *
+ *     HealthStatusResponse:
+ *       type: object
+ *       properties:
+ *         glucoseLevel:
+ *           type: string
+ *           description: Status of the user's glucose level
+ *         oxygenLevel:
+ *           type: string
+ *           description: Status of the user's oxygen level
+ *         heartRate:
+ *           type: string
+ *           description: Status of the user's heart rate
+ *         bloodPressure:
+ *           type: string
+ *           description: Status of the user's blood pressure
+ */
